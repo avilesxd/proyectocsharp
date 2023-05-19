@@ -15,7 +15,7 @@ Correo VARCHAR (50)
 CREATE TABLE Videojuegos(
 ID INT IDENTITY(1,1) PRIMARY KEY,
 Nombre VARCHAR (50) NOT NULL,
-Categoria VARCHAR (50) not null,
+Categoria VARCHAR (50) NOT NULL,
 Precio INT NOT NULL,
 Stock INT NOT NULL,
 );
@@ -33,13 +33,13 @@ Direccion VARCHAR (50),
 
 CREATE TABLE Registros (
 ID INT IDENTITY (1,1) PRIMARY KEY,
-DetalleCompra VARCHAR (50) not null,
+DetalleCompra VARCHAR (50) NOT NULL,
 ID_Cliente INT FOREIGN KEY REFERENCES Clientes(ID),
 ID_Videojuego INT FOREIGN KEY REFERENCES Videojuegos(ID),
 );
 
 CREATE TABLE Usuarios (
 id INT IDENTITY (1,1) PRIMARY KEY,
-usuario VARCHAR NOT NULL,
-password VARCHAR
+usuario VARCHAR (50) NOT NULL,
+password VARCHAR (50) NOT NULL
 );
